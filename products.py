@@ -1,7 +1,8 @@
 import os 
 
+# 讀取檔案
 prodcuts = []
-if os.path.isfile('prodcuts.csv'):
+if os.path.isfile('prodcuts.csv'): # 檢查檔案在不在
 	print('yeah! 找到檔案了')
 	with open('prodcuts.csv', 'r') as f:
 		for line in f: # line 自行定義變數
@@ -13,12 +14,6 @@ if os.path.isfile('prodcuts.csv'):
 
 else:
 	print('找不到檔案…')
-
-
-
-# 讀取檔案
-
-
 
 # 讓使用者輸入
 while True:
