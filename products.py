@@ -1,12 +1,24 @@
-# 讀取檔案
+import os 
+
 prodcuts = []
-with open('prodcuts.csv', 'r') as f:
-	for line in f: # line 自行定義變數
-		if '商品,價格' in line:
-			continue # 繼續，跳到下一迴的意思
-		name, price = line.strip().split(',')
-		prodcuts.append([name, price])
-print(prodcuts)
+if os.path.isfile('prodcuts.csv'):
+	print('yeah! 找到檔案了')
+	with open('prodcuts.csv', 'r') as f:
+		for line in f: # line 自行定義變數
+			if '商品,價格' in line:
+				continue # 繼續，跳到下一迴的意思
+			name, price = line.strip().split(',')
+			prodcuts.append([name, price])
+		print(prodcuts)
+
+else:
+	print('找不到檔案…')
+
+
+
+# 讀取檔案
+
+
 
 # 讓使用者輸入
 while True:
